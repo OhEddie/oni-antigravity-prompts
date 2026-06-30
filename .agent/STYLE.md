@@ -56,28 +56,19 @@
 - **Файлы:** ≤ 300 строк, иначе разбить
 - **Comments:** объясняют **ЗАЧЕМ**, не **ЧТО**. Код говорит что, коммент — зачем.
 
-## Формат commit messages (conventional commits)
+## Формат commit messages
 
-```
-<type>(<scope>): <description>
+**Conventional commits:** `<type>(<scope>): <description>` + body + footer.
 
-<body>
+- **Types:** `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`, `ci`
+- **Description:** ≤ 72 символов, lowercase, без точки
+- **Body:** объясни ЗАЧЕМ
+- **Footer:** `Refs: bd-NNN`, `Closes: #N`, `BREAKING CHANGE: ...`
 
-<footer>
-```
-
-**Types:** `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`, `ci`
-**Scope:** опционально, имя компонента (`auth`, `api`, `db`, etc)
-**Description:** ≤ 72 символов, lowercase, без точки в конце
-**Body:** объясни ЗАЧЕМ, не ЧТО
-**Footer:** `Refs: bd-007`, `Closes: #123`, `BREAKING CHANGE: ...`
-
-Пример:
 ```
 feat(auth): add OAuth Google provider
 
-Users жаловались на пароли. OAuth быстрее и безопаснее.
-Не ломаем существующий credentials login — добавляем как второй provider.
+Users жаловались на пароли. OAuth быстрее.
 
 Refs: bd-014
 ```

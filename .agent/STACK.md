@@ -68,18 +68,11 @@
 - **Security:** CodeQL + dependency-review
 - **Pre-commit:** husky + lint-staged
 
-## Сервисы которые я уже использую (из ofm-erp)
+## Когда добавлять новый сервис
 
-- **Cloud phones:** GeeLark Open API
-- **Scraping:** ScrapeCreators API, twitterapi.io
-- **Image generation:** ComfyUI via RunPod Serverless
-- **LLM:** OpenRouter (Gemini Flash)
-- **Notifications:** Telegram bot
+1. Задачу нельзя решить скриптом за 1 час?
+2. Есть разумный free tier?
+3. Посчитай monthly cost при 10x масштабе.
+4. Если всё ок — добавь в этот файл + создай ADR.
 
----
-
-**Когда добавлять новый сервис:**
-1. Проверь что задачу нельзя решить скриптом за 1 час
-2. Проверь что есть разумный free tier
-3. Посчитай monthly cost при 10x масштабе
-4. Если все ок — добавь в этот файл со ссылкой на ADR
+Конкретные сервисы которые уже используются в проектах — указывай в `project/PROJECT.md` (не здесь).
